@@ -1,0 +1,8 @@
+{
+    "title": "Something went wrong",
+    "subTitle": "An error occurred in the application. We are already working on fixing it.",
+    "extra": "Try again",
+    "alert": {
+        "message": "Error (only in dev mode)"
+    }
+}

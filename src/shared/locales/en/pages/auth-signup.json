@@ -1,0 +1,34 @@
+{
+    "title": "Create Account",
+    "success": "Registration successful! Welcome!",
+    "errors": {
+        "default": "Registration error"
+    },
+    "email": {
+        "label": "Email",
+        "placeholder": "example@domain.com",
+        "required": "Please enter email!",
+        "invalid": "Invalid email"
+    },
+    "password": {
+        "label": "Password",
+        "placeholder": "Create password",
+        "required": "Please enter password!",
+        "minLength": "Password must be at least 6 characters"
+    },
+    "confirmPassword": {
+        "label": "Confirm Password",
+        "placeholder": "Repeat password",
+        "required": "Please confirm password!",
+        "mismatch": "Passwords do not match!"
+    },
+    "command": {
+        "label": "Team"
+    },
+    "submit": "Sign Up",
+    "submitLoading": "Signing up...",
+    "signinDescription": "Already have an account?",
+    "links": {
+        "signin": "Sign In"
+    }
+}

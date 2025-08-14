@@ -1,0 +1,1 @@
+export { SignInIcon } from './SignInIcon';
