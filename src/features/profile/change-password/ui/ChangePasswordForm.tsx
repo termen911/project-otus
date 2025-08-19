@@ -6,17 +6,17 @@ import { Button, Form, Input, message } from 'antd';
 
 export const ChangePasswordForm = () => {
   const [form] = Form.useForm<ChangePasswordDto>();
-  const { t } = useAppTranslation();
+  const { t } = useAppTranslation('features.profile.change-password');
   const { mutate: changePassword, isPending } = useChangePassword();
 
   const onFinish = (values: ChangePasswordDto) => {
     changePassword(values, {
       onSuccess: (data) => {
         if (data.success) {
-          message.success(t('pages.profile.changePassword.success'));
+          message.success(t('success'));
           form.resetFields();
         } else {
-          message.error(t('pages.profile.changePassword.error'));
+          message.error(t('error'));
         }
       },
       onError: (error) => {
@@ -35,38 +35,38 @@ export const ChangePasswordForm = () => {
 
   return (
     <div style={{ maxWidth: 400, margin: '30px 0 0' }}>
-      <h3>{t('pages.profile.changePassword.title')}</h3>
+      <h3>{t('title')}</h3>
       <Form form={form} layout="vertical" onFinish={onFinish}>
         <Form.Item
           name="password"
-          label={t('pages.profile.changePassword.currentPassword.label')}
+          label={t('currentPassword.label')}
           rules={[
-            { required: true, message: t('pages.profile.changePassword.currentPassword.required') },
+            { required: true, message: t('currentPassword.required') },
           ]}
         >
           <Input.Password
             prefix={<LockOutlined />}
-            placeholder={t('pages.profile.changePassword.currentPassword.placeholder')}
+            placeholder={t('currentPassword.placeholder')}
           />
         </Form.Item>
 
         <Form.Item
           name="newPassword"
-          label={t('pages.profile.changePassword.newPassword.label')}
+          label={t('newPassword.label')}
           rules={[
-            { required: true, message: t('pages.profile.changePassword.newPassword.required') },
-            { min: 6, message: t('pages.profile.changePassword.newPassword.minLength') },
+            { required: true, message: t('newPassword.required') },
+            { min: 6, message: t('newPassword.minLength') },
           ]}
         >
           <Input.Password
             prefix={<LockOutlined />}
-            placeholder={t('pages.profile.changePassword.newPassword.placeholder')}
+            placeholder={t('newPassword.placeholder')}
           />
         </Form.Item>
 
         <Form.Item>
           <Button type="primary" htmlType="submit" loading={isPending}>
-            {t('pages.profile.changePassword.submit')}
+            {t('submit')}
           </Button>
         </Form.Item>
       </Form>

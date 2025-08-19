@@ -1,4 +1,4 @@
-import { LoginForm } from '@/features/auth-by-email';
+import { LoginForm } from '@/features/auth/auth-by-email';
 import { MainLayout } from '@/widgets/main-layout';
 import { Card, Flex } from 'antd';
 

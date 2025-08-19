@@ -1,0 +1,11 @@
+{
+    "title": "Edit profile",
+    "name": {
+        "label": "Nickname",
+        "placeholder": "Your nickname",
+        "required": "Enter nickname",
+        "minLength": "Nickname must be at least 2 characters long"
+    },
+    "submit": "Save",
+    "success": "Nickname updated"
+}

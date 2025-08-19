@@ -15,7 +15,7 @@ export const CategorySelectWithCreate: React.FC<CategorySelectWithCreateProps> =
   onCreate,
   ...selectProps
 }) => {
-  const { t } = useAppTranslation();
+  const { t } = useAppTranslation('features.category-create-in-form');
   const inputRef = useRef<InputRef>(null);
 
   const handleCreate = (name: string) => {
@@ -53,7 +53,7 @@ export const CategorySelectWithCreate: React.FC<CategorySelectWithCreateProps> =
           <Divider style={{ margin: '8px 0' }} />
           <Space style={{ padding: '0 8px 8px' }}>
             <Input
-              placeholder={t('pages.operations.form.fields.category.popup.placeholder')}
+              placeholder={t('placeholder')}
               ref={inputRef}
               onPressEnter={handlePressEnter}
               disabled={isCreating}
@@ -68,7 +68,7 @@ export const CategorySelectWithCreate: React.FC<CategorySelectWithCreateProps> =
               loading={isCreating}
               disabled={isCreating}
             >
-              {t('pages.operations.form.fields.category.popup.add')}
+              {t('addButton')}
             </Button>
           </Space>
         </>

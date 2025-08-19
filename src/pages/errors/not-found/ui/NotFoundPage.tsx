@@ -1,21 +1,21 @@
+import { useAppTranslation } from '@/app/providers/i18n/useAppTranslation';
 import { MainLayout } from '@/widgets/main-layout';
 import { Button, Result } from 'antd';
-import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
 
 export const NotFoundPage = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation();
+  const { t } = useAppTranslation('pages.errors.not-found');
 
   return (
     <MainLayout>
       <Result
         status="404"
         title="404"
-        subTitle={t('pages.notFound.subTitle')}
+        subTitle={t('subTitle')}
         extra={
           <Button type="primary" onClick={() => navigate('/')}>
-            {t('pages.notFound.extra.backHome')}
+            {t('extra.backHome')}
           </Button>
         }
       />

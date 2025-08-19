@@ -1,0 +1,11 @@
+{
+    "loading": "Loading...",
+    "notFound": "Profile not found",
+    "title": "User profile",
+    "info": {
+        "name": "Nickname:",
+        "email": "Email:",
+        "signUpDate": "Sign up date:",
+        "noName": "---"
+    }
+}

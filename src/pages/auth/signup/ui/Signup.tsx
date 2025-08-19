@@ -1,4 +1,4 @@
-import { RegisterForm } from '@/features/auth-by-email';
+import { RegisterForm } from '@/features/auth/auth-by-email';
 import { MainLayout } from '@/widgets/main-layout';
 import { Card, Flex } from 'antd';
 

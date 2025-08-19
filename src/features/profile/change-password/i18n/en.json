@@ -1,0 +1,17 @@
+{
+    "title": "Change password",
+    "currentPassword": {
+        "label": "Current password",
+        "placeholder": "••••••",
+        "required": "Enter current password"
+    },
+    "newPassword": {
+        "label": "New password",
+        "placeholder": "••••••",
+        "required": "Enter new password",
+        "minLength": "Password must be at least 6 characters long"
+    },
+    "submit": "Change password",
+    "success": "Password successfully changed",
+    "error": "Error changing password"
+}

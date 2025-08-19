@@ -1,4 +1,4 @@
-import { SignInIcon } from '@/features/auth-sign-in';
+import { SignInIcon } from '@/features/auth/auth-sign-in';
 import { UserMenu } from '@/features/user-menu/ui/UserMenu';
 import { useSessionStore } from '@/entities/session';
 import { useLocation } from 'react-router';

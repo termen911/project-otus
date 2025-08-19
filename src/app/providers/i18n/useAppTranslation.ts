@@ -4,8 +4,8 @@ import { useLanguageStore } from './useLanguageStore';
 
 type Language = 'ru' | 'en';
 
-export const useAppTranslation = () => {
-  const { t, i18n } = useTranslation();
+export const useAppTranslation = (namespace?: string) => {
+  const { t, i18n } = useTranslation(namespace);
   const { setLanguage } = useLanguageStore();
 
   const changeLanguage = useCallback(

@@ -1,3 +1,4 @@
+import { useAppTranslation } from '@/app/providers/i18n/useAppTranslation';
 import { DeleteOutlined, EditOutlined } from '@ant-design/icons';
 import { Button, Dropdown, type MenuProps } from 'antd';
 import { useEffect, useState } from 'react';
@@ -8,6 +9,7 @@ interface OperationExtraMenuProps {
 }
 
 export const OperationExtraMenu = ({ onEdit, onDelete }: OperationExtraMenuProps) => {
+  const { t } = useAppTranslation('entities.operation');
   const [menu, setMenu] = useState<MenuProps['items']>([]);
 
   useEffect(() => {
@@ -16,7 +18,7 @@ export const OperationExtraMenu = ({ onEdit, onDelete }: OperationExtraMenuProps
       newMenu.push({
         key: 'edit',
         icon: <EditOutlined />,
-        label: 'Редактировать',
+        label: t('extraMenu.edit'),
         onClick: onEdit,
       });
     }
@@ -24,13 +26,13 @@ export const OperationExtraMenu = ({ onEdit, onDelete }: OperationExtraMenuProps
       newMenu.push({
         key: 'delete',
         icon: <DeleteOutlined />,
-        label: 'Удалить',
+        label: t('extraMenu.delete'),
         danger: true,
         onClick: onDelete,
       });
     }
     setMenu(newMenu);
-  }, [onEdit, onDelete]);
+  }, [onEdit, onDelete, t]);
 
   return (
     <Dropdown menu={{ items: menu }} trigger={['click']}>

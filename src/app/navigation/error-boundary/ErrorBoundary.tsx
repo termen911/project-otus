@@ -51,11 +51,11 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
         <div style={{ padding: '24px', maxWidth: '800px', margin: '40px auto' }}>
           <Result
             status="500"
-            title={this.t('pages.errorBoundary.title')}
-            subTitle={this.t('pages.errorBoundary.subTitle')}
+            title={this.t('app.navigation.error-boundary.title')}
+            subTitle={this.t('app.navigation.error-boundary.subTitle')}
             extra={
               <Button type="primary" icon={<ReloadOutlined />} onClick={this.handleReset}>
-                {this.t('pages.errorBoundary.extra')}
+                {this.t('app.navigation.error-boundary.extra')}
               </Button>
             }
           />
@@ -63,7 +63,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
           {process.env.NODE_ENV === 'development' && (
             <Alert
               type="error"
-              message={this.t('pages.errorBoundary.alert.message')}
+              message={this.t('app.navigation.error-boundary.alert.message')}
               description={
                 <div>
                   <p>

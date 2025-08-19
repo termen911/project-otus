@@ -1,0 +1,10 @@
+{
+    "alert": {
+        "error": "Error loading operations",
+        "noOperations": "No operations"
+    },
+    "divider": {
+        "loading": "Loading more...",
+        "allOperations": "All operations displayed"
+    }
+}

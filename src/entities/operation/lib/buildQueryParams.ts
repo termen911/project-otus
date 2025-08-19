@@ -1,4 +1,4 @@
-import type { OperationFilters } from '../types';
+import type { OperationFilters } from '../model';
 
 export const buildQueryParams = (filters: OperationFilters): URLSearchParams => {
   const params = new URLSearchParams();

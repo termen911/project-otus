@@ -1,0 +1,62 @@
+{
+    "login": {
+        "title": "Login",
+        "success": "Welcome!",
+        "email": {
+            "label": "Email",
+            "placeholder": "Enter email",
+            "required": "Required field",
+            "invalid": "Invalid email"
+        },
+        "password": {
+            "label": "Password",
+            "placeholder": "Enter password",
+            "required": "Required field",
+            "minLength": "Password must be at least 6 characters"
+        },
+        "submit": "Login",
+        "submitLoading": "Login...",
+        "errors": {
+            "incorrectEmailOrPassword": "Invalid email or password",
+            "required": "Required field"
+        },
+        "signupDescription": "No account?",
+        "links": {
+            "signup": "Sign up"
+        }
+    },
+    "register": {
+        "title": "Create account",
+        "success": "Registration successful! Welcome!",
+        "errors": {
+            "default": "Registration error"
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "example@domain.com",
+                "required": "Please enter email!",
+            "invalid": "Invalid email"
+        },
+        "password": {
+            "label": "Password",
+            "placeholder": "Enter password",
+            "required": "Please enter password!",
+            "minLength": "Password must be at least 6 characters"
+        },
+        "confirmPassword": {
+            "label": "Confirm password",
+            "placeholder": "Confirm password",
+            "required": "Please confirm password!",
+            "mismatch": "Passwords do not match!"
+        },
+        "command": {
+            "label": "Command"
+        },
+        "submit": "Register",
+        "submitLoading": "Registering...",
+        "signinDescription": "Already have an account?",
+        "links": {
+            "signin": "Login"
+        }
+    }
+}

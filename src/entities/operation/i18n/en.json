@@ -1,0 +1,9 @@
+{
+    "cost": "Cost",
+    "profit": "Profit",
+    "date": "Date {{date}}",
+    "extraMenu": {
+        "edit": "Edit",
+        "delete": "Delete"
+    }
+}
