@@ -15,7 +15,7 @@ export const decodeToken = (token: string): DecodedToken | null => {
     const payload = JSON.parse(atob(parts[1]));
     return payload;
   } catch (error) {
-    console.warn('Ошибка декодирования токена:', error);
+    console.warn('Error decoding token:', error);
     return null;
   }
 };

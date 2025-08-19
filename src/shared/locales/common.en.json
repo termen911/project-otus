@@ -1,0 +1,31 @@
+{
+    "errorBoundary": {
+        "title": "Something went wrong",
+        "subTitle": "An error occurred in the application. We are already working on fixing it.",
+        "extra": "Try again",
+        "alert": {
+            "message": "Error (only in dev mode)"
+        }
+    },
+    "serverError": {
+        "ERR_INCORRECT_EMAIL_OR_PASSWORD": "Incorrect email or password",
+        "ERR_ACCOUNT_ALREADY_EXIST": "User with this email already exists",
+        "ERR_FIELD_REQUIRED": "Field \"{field}\" is required",
+        "ERR_FIELD_REQUIRED_DEFAULT": "Fill in the required fields",
+        "ERR_INCORRECT_PASSWORD": "Current password is incorrect",
+        "ERR_INVALID_PASSWORD": "Password must be at least 8 characters long and contain letters, numbers or special characters",
+        "ERR_NOT_VALID": "Invalid identifier",
+        "ERR_AUTH": "Authorization is required. Please log in again",
+        "ERR_NO_FILES": "Failed to upload files",
+        "ERR_NOT_ALLOWED": "You do not have permission to perform this action",
+        "ERR_NOT_FOUND": "The requested page or object was not found",
+        "ERR_VALIDATION_ERROR": "Data is filled incorrectly",
+        "ERR_INVALID_QUERY_PARAMS": "Invalid query parameters",
+        "ERR_INTERNAL_SERVER": "An error occurred on the server. Please contact the administrator",
+        "DEFAULT_ERROR": "An error occurred"
+    },
+        "validateToken": {
+            "INVALID_TOKEN_FORMAT": "Invalid token format",
+            "TOKEN_EXPIRED": "Token expired"
+        }
+}
