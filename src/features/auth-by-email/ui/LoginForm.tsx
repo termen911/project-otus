@@ -1,10 +1,11 @@
 import { useAppTranslation } from '@/app/providers/i18n/useAppTranslation';
 import { handleApiError } from '@/shared/lib/errors/handleApiError';
 import { LockOutlined, MailOutlined } from '@ant-design/icons';
-import { Button, Divider, Form, Input, message, Typography } from 'antd';
+import { App, Button, Divider, Form, Input, Typography } from 'antd';
 import { useNavigate } from 'react-router';
 import { useLogin } from '../api/useLogin';
 import type { LoginDto, LoginFormValues } from '../model/types';
+import { useQueryClient } from '@tanstack/react-query';
 
 const { Item: FormItem } = Form;
 const { Link } = Typography;
@@ -12,8 +13,10 @@ const { Link } = Typography;
 export const LoginForm = () => {
   const [form] = Form.useForm<LoginFormValues>();
   const { t } = useAppTranslation();
+  const { message } = App.useApp();
   const { mutate: login, isPending } = useLogin();
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
   const onFinish = (values: LoginFormValues) => {
     const dto: LoginDto = {
@@ -24,6 +27,7 @@ export const LoginForm = () => {
     login(dto, {
       onSuccess: () => {
         message.success(t('pages.authSignin.success'));
+        queryClient.clear();
         navigate('/profile');
       },
       onError: (error) => {

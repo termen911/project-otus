@@ -1,0 +1,63 @@
+{
+    "buttons": {
+        "addNewOperation": "Add"
+    },
+    "form": {
+        "titleCreate": "New operation",
+        "buttons": {
+            "cancel": "Cancel",
+            "create": "Create",
+            "save": "Save"
+        },
+        "loading": "Saving...",
+        "fields": {
+            "name": {
+                "label": "Name",
+                "placeholder": "For example: Salary",
+                "errors": {
+                    "required": "Name is required"
+                }
+            },
+            "description": {
+                "label": "Description",
+                "placeholder": "Additional details"
+            },
+            "amount": {
+                "label": "Amount",
+                "placeholder": "0.00",
+                "errors": {
+                    "required": "Amount is required"
+                }
+            },
+            "date": {
+                "label": "Date",
+                "placeholder": "Select date",
+                "errors": {
+                    "required": "Date is required"
+                }
+            },
+            "type": {
+                "label": "Type",
+                "placeholder": "Select type",
+                "options": {
+                    "profit": "Profit",
+                    "cost": "Cost"
+                },
+                "errors": {
+                    "required": "Type is required"
+                }
+            },
+            "category": {
+                "label": "Category",
+                "placeholder": "Select or create category",
+                "errors": {
+                    "required": "Category is required"
+                },
+                "popup": {
+                    "placeholder": "New category",
+                    "add": "Add"
+                }
+            }
+        }
+    }
+}

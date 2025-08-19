@@ -46,10 +46,13 @@ export const RegisterForm = () => {
       disabled={isPending}
       autoComplete="off"
       style={{ maxWidth: 400, margin: '0 auto', padding: '20px' }}
+      initialValues={{
+        commandId: COMMAND_ID,
+      }}
     >
       <h2 style={{ textAlign: 'center', marginBottom: 24 }}>{t('pages.authSignup.title')}</h2>
       <FormItem name="commandId" label={t('pages.authSignup.command.label')} hidden>
-        <Input value={COMMAND_ID} disabled />
+        <Input disabled />
       </FormItem>
       <FormItem
         name="email"

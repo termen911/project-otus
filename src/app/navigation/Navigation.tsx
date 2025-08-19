@@ -26,7 +26,9 @@ const SignupPage = lazy(() =>
 
 const ProfilePage = lazy(() => import('@/pages/profile').then((module) => ({ default: module.ProfilePage })));
 
-const HomePage = lazy(() => import('@/pages/home').then((module) => ({ default: module.HomePage })));
+const OperationsPage = lazy(() =>
+  import('@/pages/operations').then((module) => ({ default: module.OperationsPage }))
+);
 
 export const Navigation = () => {
   return (
@@ -41,7 +43,7 @@ export const Navigation = () => {
           </ProtectedRoute>
         }
       />
-      <Route path="/" element={<LazyComponent component={HomePage} />} />
+      <Route path="/" element={<LazyComponent component={OperationsPage} />} />
       <Route path="*" element={<LazyComponent component={NotFoundPage} />} />
     </Routes>
   );

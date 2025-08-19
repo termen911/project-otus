@@ -1,7 +1,7 @@
-import { useProfileStore } from '@/entities/profile';
-import { profileApi } from '@/shared/api';
+import { profileApi, useProfileStore } from '@/entities/profile';
 import { validateToken as validateTokenUtil } from '@/shared/lib/auth';
 import { safeLocalStorage } from '@/shared/lib/storage';
+import { QueryClient } from '@tanstack/react-query';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
@@ -10,7 +10,7 @@ interface SessionState {
   isAuthenticated: boolean;
   error: string | null;
   setToken: (token: string) => void;
-  logout: () => void;
+  logout: (queryClient: QueryClient) => void;
   clearError: () => void;
   validateToken: () => Promise<boolean>;
   initializeAuth: () => void;
@@ -36,9 +36,9 @@ export const useSessionStore = create(
         get().loadProfile();
       },
 
-      logout: () => {
+      logout: (queryClient: QueryClient) => {
         useProfileStore.getState().clearProfile();
-
+        queryClient.clear();
         set({
           token: null,
           isAuthenticated: false,

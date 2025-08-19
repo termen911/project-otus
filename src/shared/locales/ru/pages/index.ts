@@ -2,6 +2,7 @@ import authSignin from './auth-signin.json';
 import authSignup from './auth-signup.json';
 import errorBoundary from './error-boundary.json';
 import notFound from './not-found.json';
+import operations from './operations.json';
 import profile from './profile.json';
 
 const pages = {
@@ -10,6 +11,7 @@ const pages = {
   authSignup,
   profile,
   errorBoundary,
+  operations,
 };
 
 export default pages;
