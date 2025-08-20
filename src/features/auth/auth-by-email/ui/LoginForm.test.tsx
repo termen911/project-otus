@@ -68,7 +68,7 @@ vi.mock('antd', async () => {
   return {
     ...actual,
     App: {
-      ...actual.App,
+      ...(actual.App as object),
       useApp: () => ({
         message: {
           success: mockMessageSuccess,
@@ -248,7 +248,7 @@ describe('LoginForm', () => {
 
     it('должен обрабатывать успешный логин', async () => {
       // Переопределяем мок для этого теста
-      const mockLoginSuccess = vi.fn((data, options) => {
+      const mockLoginSuccess = vi.fn((_, options) => {
         options.onSuccess();
       });
 
@@ -286,7 +286,7 @@ describe('LoginForm', () => {
         { fieldName: 'password', message: 'Неверный пароль' },
       ]);
 
-      const mockLoginError = vi.fn((data, options) => {
+      const mockLoginError = vi.fn((_, options) => {
         options.onError(new Error('API Error'));
       });
 
@@ -382,7 +382,7 @@ describe('LoginForm', () => {
 
   describe('Интеграционные тесты', () => {
     it('должен выполнять полный цикл входа пользователя', async () => {
-      const mockLoginSuccess = vi.fn((data, options) => {
+      const mockLoginSuccess = vi.fn((_, options) => {
         // Симулируем успешный ответ от API
         setTimeout(() => options.onSuccess(), 100);
       });

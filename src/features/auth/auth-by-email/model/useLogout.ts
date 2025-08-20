@@ -1,3 +1,4 @@
+import { useProfileStore } from '@/entities/profile';
 import { useSessionStore } from '@/entities/session';
 import { useQueryClient } from '@tanstack/react-query';
 import { useNavigate } from 'react-router';
@@ -7,8 +8,12 @@ export const useLogout = () => {
   const { logout } = useSessionStore();
   const queryClient = useQueryClient();
 
-  return () => {
-    logout(queryClient);
+  const handleLogout = () => {
+    useProfileStore.getState().clearProfile();
+    queryClient.clear();
+    logout();
     navigate('/auth/signin', { replace: true });
   };
+
+  return handleLogout;
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Spin, Space, Typography } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import { useAppTranslation } from '@/app/providers/i18n/useAppTranslation';
 
 const { Text } = Typography;
 

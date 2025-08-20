@@ -295,7 +295,7 @@ describe('RegisterForm', () => {
 
     it('должен обрабатывать успешную регистрацию', async () => {
       // Переопределяем мок для этого теста
-      const mockRegisterSuccess = vi.fn((data, options) => {
+      const mockRegisterSuccess = vi.fn((_, options) => {
         options.onSuccess();
       });
 
@@ -333,7 +333,7 @@ describe('RegisterForm', () => {
         { fieldName: 'password', message: 'Пароль слишком простой' },
       ]);
 
-      const mockRegisterError = vi.fn((data, options) => {
+      const mockRegisterError = vi.fn((_, options) => {
         options.onError(new Error('API Error'));
       });
 
@@ -408,7 +408,7 @@ describe('RegisterForm', () => {
 
   describe('Интеграционные тесты', () => {
     it('должен выполнять полный цикл регистрации пользователя', async () => {
-      const mockRegisterSuccess = vi.fn((data, options) => {
+      const mockRegisterSuccess = vi.fn((_, options) => {
         // Симулируем успешный ответ от API
         setTimeout(() => options.onSuccess(), 100);
       });
