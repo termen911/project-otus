@@ -3,8 +3,7 @@ import { Button, Divider, Input, Select, Space, type InputRef, type SelectProps 
 import { useRef } from 'react';
 import { useAppTranslation } from '@/app/providers/i18n/useAppTranslation';
 
-interface CategorySelectWithCreateProps extends Omit<SelectProps, 'options'> {
-  options: { label: string; value: string }[];
+interface CategorySelectWithCreateProps extends SelectProps {
   isCreating?: boolean;
   onCreate: (name: string) => void;
 }

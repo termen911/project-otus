@@ -42,9 +42,7 @@ export const OperationForm: React.FC<OperationFormProps> = ({ onSubmit, onCancel
         name="name"
         label={t('fields.name.label')}
         required
-        rules={[
-          { required: true, message: t('fields.name.errors.required') },
-        ]}
+        rules={[{ required: true, message: t('fields.name.errors.required') }]}
       >
         <Input placeholder={t('fields.name.placeholder')} />
       </Form.Item>
@@ -57,39 +55,25 @@ export const OperationForm: React.FC<OperationFormProps> = ({ onSubmit, onCancel
         name="amount"
         label={t('fields.amount.label')}
         required
-        rules={[
-          { required: true, message: t('fields.amount.errors.required') },
-        ]}
+        rules={[{ required: true, message: t('fields.amount.errors.required') }]}
       >
-        <Input
-          type="number"
-          step="0.01"
-          placeholder={t('fields.amount.placeholder')}
-        />
+        <Input type="number" step="0.01" placeholder={t('fields.amount.placeholder')} />
       </Form.Item>
 
       <Form.Item
         name="date"
         label={t('fields.date.label')}
         required
-        rules={[
-          { required: true, message: t('fields.date.errors.required') },
-        ]}
+        rules={[{ required: true, message: t('fields.date.errors.required') }]}
       >
-        <DatePicker
-          showTime
-          style={{ width: '100%' }}
-          placeholder={t('fields.date.placeholder')}
-        />
+        <DatePicker showTime style={{ width: '100%' }} placeholder={t('fields.date.placeholder')} />
       </Form.Item>
 
       <Form.Item
         name="type"
         label={t('fields.type.label')}
         required
-        rules={[
-          { required: true, message: t('fields.type.errors.required') },
-        ]}
+        rules={[{ required: true, message: t('fields.type.errors.required') }]}
       >
         <Select
           placeholder={t('fields.type.placeholder')}
@@ -104,9 +88,7 @@ export const OperationForm: React.FC<OperationFormProps> = ({ onSubmit, onCancel
         name="categoryId"
         label={t('fields.category.label')}
         required
-        rules={[
-          { required: true, message: t('fields.category.errors.required') },
-        ]}
+        rules={[{ required: true, message: t('fields.category.errors.required') }]}
       >
         {isLoadingCategories ? (
           <Skeleton.Input active />
@@ -133,9 +115,7 @@ export const OperationForm: React.FC<OperationFormProps> = ({ onSubmit, onCancel
           {t('buttons.cancel')}
         </Button>
         <Button type="primary" htmlType="submit" loading={isCreatingCategory}>
-          {isEditing
-            ? t('buttons.save')
-            : t('buttons.create')}
+          {isEditing ? t('buttons.save') : t('buttons.create')}
         </Button>
       </Flex>
     </Form>

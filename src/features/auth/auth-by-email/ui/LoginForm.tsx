@@ -65,6 +65,7 @@ export const LoginForm = () => {
         ]}
       >
         <Input
+          data-testid="email-input"
           prefix={<MailOutlined />}
           placeholder={t('login.email.placeholder')}
           autoFocus
@@ -80,6 +81,7 @@ export const LoginForm = () => {
         ]}
       >
         <Input.Password
+          data-testid="password-input"
           prefix={<LockOutlined />}
           placeholder={t('login.password.placeholder')}
         />
