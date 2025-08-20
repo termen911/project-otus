@@ -1,0 +1,1 @@
+import{u as e,a as o,j as t,R as r,B as n}from"./index-BCoEnLYD.js";import{M as i}from"./MainLayout-B2GjFgBT.js";const l=()=>{const a=e(),{t:s}=o("pages.errors.not-found");return t.jsx(i,{children:t.jsx(r,{status:"404",title:"404",subTitle:s("subTitle"),extra:t.jsx(n,{type:"primary",onClick:()=>a("/"),children:s("extra.backHome")})})})};export{l as NotFoundPage};
