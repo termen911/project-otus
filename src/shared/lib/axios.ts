@@ -2,7 +2,7 @@ import { useSessionStore } from '@/entities/session';
 import axios from 'axios';
 
 export const axiosInstance = axios.create({
-  baseURL: 'http://19429ba06ff2.vps.myjino.ru/api',
+  baseURL: 'https://19429ba06ff2.vps.myjino.ru/api',
 });
 
 axiosInstance.interceptors.request.use(
